@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("/assets/fonts/PlusJakartaSans.woff2") format("woff2");
+  font-weight: 300 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fraunces";
+  src: url("/assets/fonts/Fraunces.woff2") format("woff2");
+  font-weight: 300 900;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --radius: 0.875rem;
+    /* Terracotta orange #C85A2E → oklch(0.55 0.17 35) */
+    --primary: 0.55 0.17 35;
+    --primary-foreground: 1 0 0;
+    /* Page background #FFFFFF */
+    --background: 1 0 0;
+    --foreground: 0.16 0 0;
+    /* Cards */
+    --card: 1 0 0;
+    --card-foreground: 0.16 0 0;
+    --popover: 1 0 0;
+    --popover-foreground: 0.16 0 0;
+    /* Secondary warm light */
+    --secondary: 0.97 0.01 60;
+    --secondary-foreground: 0.16 0 0;
+    /* Muted #6B6B6B */
+    --muted: 0.96 0 0;
+    --muted-foreground: 0.5 0 0;
+    /* Accent warm orange tint */
+    --accent: 0.95 0.03 50;
+    --accent-foreground: 0.55 0.17 35;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+    --border: 0.91 0 0;
+    --input: 0.91 0 0;
+    --ring: 0.55 0.17 35;
+    --chart-1: 0.55 0.17 35;
+    --chart-2: 0.6 0.118 184.704;
+    --chart-3: 0.398 0.07 227.392;
+    --chart-4: 0.828 0.189 84.429;
+    --chart-5: 0.769 0.188 70.08;
+    --sidebar: 0.985 0 0;
+    --sidebar-foreground: 0.145 0 0;
+    --sidebar-primary: 0.55 0.17 35;
+    --sidebar-primary-foreground: 1 0 0;
+    --sidebar-accent: 0.97 0 0;
+    --sidebar-accent-foreground: 0.205 0 0;
+    --sidebar-border: 0.922 0 0;
+    --sidebar-ring: 0.55 0.17 35;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Plus Jakarta Sans", "Inter", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+}
